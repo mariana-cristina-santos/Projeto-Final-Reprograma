@@ -1,20 +1,5 @@
-const express = require('express')
-const app = express()
-const port = 3000
-app.use(express.json())
+const app = require("./src/app");
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const port = 3030;
 
-app.post('/teste', (req,res) =>{
-  const corpoDaReq = req.body
-
-  console.log(corpoDaReq)
-
-  res.send("essa rota é um teste")
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(port, () => console.log(`Listening on port: ${port}`));
